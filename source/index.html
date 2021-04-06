@@ -8,7 +8,6 @@
 
 <body class="page-body">
   <header class="page-header">
-    <h1 class="page-header__title"></h1>
     <a class="page-header__logo logo" href="#">
       <img class="logo__image" src="img/logo-icon-mobile.svg" width="33" height="37" alt="логотип магазина CatEnergy">
       <img class="logo__name" src="img/logo-name.svg" width="101" height="18" alt="#">
@@ -17,39 +16,45 @@
       <button type="button" class="main-navigation__toggle"><img src="img/navigation-icon.svg"
           alt="Главное меню"></button>
       <ul class="main-navigation__list visially-hidden">
-        <li class="main-navigation__item">Главная</li>
-        <li class="main-navigation__item">Каталог продукции</li>
-        <li class="main-navigation__item">Подбор программы</li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#">Главная</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="./catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="./form.html">Подбор программы</a>
+        </li>
       </ul>
     </nav>
-    <section class="page-header__promo promo">
-      <h1 class="promo__title">Функциональное
-        питание для котов</h1>
-      <p class="promo__subtitle">Занялся собой? Займись котом!</p>
-      <button type="button" class="promo__button">Подобрать программу</button>
-    </section>
   </header>
 
   <main class="page-main">
+    <section class="page-main__promo promo">
+      <h1 class="promo__title">Функциональное
+        питание для котов</h1>
+      <p class="promo__subtitle">Занялся собой? Займись котом!</p>
+      <a class="promo__link" href="form.html">Подобрать программу</a>
+    </section>
     <section class="page-main__targets targets">
-      <h1 class="visially-hidden">Варианты программ</h1>
+      <h2 class="visially-hidden">Варианты программ</h2>
       <ul class="targets__list">
         <li class="targets__item">
-          <h1 class="targets__title">Похудение</h1>
+          <h2 class="targets__title">Похудение</h2>
           <p class="targets__subtitle">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора
             на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <button class="targets__button">Каталог Slim</button>
+          <a href="catalog.html" class="targets__link">Каталог Slim</a>
         </li>
         <li class="targets__item">
-          <h1 class="targets__title">Набор массы</h1>
+          <h2 class="targets__title">Набор массы</h2>
           <p class="targets__subtitle">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
             поможет вашему коту нарастить необходимые мышцы!</p>
-          <button type="button" class="targets__button">Каталог Pro</button>
+          <a class="targets__link">Каталог Pro</a>
         </li>
       </ul>
     </section>
     <section class="page-main__about about">
-      <h1 class="about__title">Как это работает</h1>
+      <h2 class="about__title">Как это работает</h2>
       <ul class="about__list">
         <li class="about__item">
           <p class="about__subtitle">Функциональное питание
@@ -72,7 +77,7 @@
       </ul>
     </section>
     <section class="page-main__example example">
-      <h1 class="example__title">Живой пример</h1>
+      <h2 class="example__title">Живой пример</h2>
       <p class="example__subtitle">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
         Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
         в день. </p>
@@ -90,14 +95,15 @@
           <span>15000 руб.</span>
         </p>
       </div>
-      <img class="example__image" src="img/cat-before.jpg" width="311" height="232" alt="Фотография кота до похудения">
+      <img class="example__before" src="img/cat-before.jpg" width="311" height="232" alt="Фотография кота до похудения">
+      <img class="example__after" src="img/cat-after.jpg" width="251" height="240" alt="Фотография кота после похудения">
       <div class="example__changes changes">
-        <span class="changes__name">Было</span>
+        <button type="button" class="changes__button">Было</button>
         <div class="changes__toggle toggle-full">
           <div class="toggle-full__outside"></div>
           <div class="toggle-full__inside"></div>
         </div>
-        <span class="changes__name">Стало</span>
+        <button type="button" class="changes__button">Стало</button>
       </div>
     </section>
   </main>
@@ -105,18 +111,18 @@
   <footer class="page-footer">
     <section class="page-footer__contacts footer-contacts">
       <div class="footer-contacts__info">
-        <h1 class="footer-contacts__invite">Приглашаем
-          к сотрудничеству дилеров!</h1>
+        <h2 class="footer-contacts__invite">Приглашаем
+          к сотрудничеству дилеров!</h2>
         <p class="footer-contacts__adress">ул. Большая
           Конюшенная, д. 19/8
           Санкт-Петербург</p>
       </div>
       <div class="footer-contacts__map">
-        <a href="https://goo.gl/maps/HDGckft71q5PLzS59" class="footer-contacts__map-link"><img src="img/map-mobile.jpg"
-            height="362" width="320" alt="Карта расположения магазина CatEnergy"></a>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003226!2d30.320858716213408!3d59.938719169053975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1617718256975!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
       </div>
     </section>
-    <img class="page-footer__logo" src="img/logo-name.svg" alt="логотип магазина CatEnergy">
+    <a class="page-footer__link" href="#"><img class="page-footer__logo" src="img/logo-name.svg" alt="логотип магазина CatEnergy"></a>
     <div class="page-footer__social footer-social">
       <ul class="footer-social__list">
         <li class="footer-social__item">
@@ -149,8 +155,8 @@
       </ul>
     </div>
     <div class="page-footer__copyright copyright">
-      <span class="copyright__name">HTML Academy</span>
-      <a class="copyright__link" href="#">
+      <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/22">
+        <span class="copyright__name">HTML Academy</span>
         <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z"
