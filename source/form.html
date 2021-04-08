@@ -30,82 +30,84 @@
   </header>
 
   <main class="page-main">
-    <section class="page-main__promo promo">
-      <h1 class="promo__title">Функциональное
-        питание для котов</h1>
-      <p class="promo__subtitle">Занялся собой? Займись котом!</p>
-      <a class="promo__link" href="form.html">Подобрать программу</a>
-    </section>
-    <section class="page-main__targets targets">
-      <h2 class="visially-hidden">Варианты программ</h2>
-      <ul class="targets__list">
-        <li class="targets__item">
-          <h2 class="targets__title">Похудение</h2>
-          <p class="targets__subtitle">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора
-            на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a href="catalog.html" class="targets__link">Каталог Slim</a>
+    <h1 class="page-main__title">Подбор программы</h1>
+    <p class="page-main__subtitle">Заполните анкету, и мы подберем
+      программу питания для вашего кота</p>
+    <form class="page-main__form main-form" method="POST" action="https://echo.htmlacademy.ru">
+      <fieldset class="main-form__user">
+      <ul class="user-list">
+        <li class="user-list__item">
+          <label for="user-name">Имя:<sup>*</sup></label>
+          <input type="text" id="user-name" name="client-name" placeholder="Барсик">
         </li>
-        <li class="targets__item">
-          <h2 class="targets__title">Набор массы</h2>
-          <p class="targets__subtitle">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
-            поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="targets__link">Каталог Pro</a>
+        <li class="user-list__item">
+          <label for="user-weight">Вес (кг):<sup>*</sup></label>
+          <input type="number" id="user-weight" name="client-weight" placeholder="7">
+        </li>
+        <li class="user-list__item">
+          <label for="user-age">Возраст (лет):</label>
+          <input type="number" id="user-age" name="client-age" placeholder="7">
         </li>
       </ul>
-    </section>
-    <section class="page-main__about about">
-      <h2 class="about__title">Как это работает</h2>
-      <ul class="about__list">
-        <li class="about__item">
-          <p class="about__subtitle">Функциональное питание
-            содержит только полезные
-            питательные вещества.</p>
+    </fieldset>
+    <fieldset class="main-form__goal">
+      <ul class="goal-list">
+        <li class="goal-list__item">
+          <input type="radio" name="client-goal" id="user-goal-slim" value="slim" checked>
+          <label for="user-goal-slim">Похудение</label>
         </li>
-        <li class="about__item">
-          <p class="about__subtitle">Выпускается в виде порошка,
-            который нужно лишь залить
-            кипятком и готово.</p>
+        <li class="goal-list__item">
+          <input type="radio" name="client-goal" id="user-goal-weight" value="weight-gain">
+          <label for="user-goal-weight">Набор массы</label>
         </li>
-        <li class="about__item">
-          <p class="about__subtitle">Замените один-два приема
-            обычной еды на наше
-            функциональное питание.</p>
-        </li>
-        <li class="about__item">
-          <p class="about__subtitle">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+        <li>
+          <input type="radio" name="client-goal" id="user-goal-dontknow" value="dont-know">
+          <label for="user-goal-dontknow">Не знаю (Нужен ваш совет)</label>
         </li>
       </ul>
-    </section>
-    <section class="page-main__example example">
-      <h2 class="example__title">Живой пример</h2>
-      <p class="example__subtitle">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-        Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
-        в день. </p>
-      <div class="example__results result">
-        <dl class="result__item">
-          <dt class="result__title">5 кг</dt>
-          <dd class="result__description">снижение веса</dd>
-        </dl>
-        <dl class="result__item">
-          <dt class="result__title">60 дней</dt>
-          <dd class="result__description">затрачено времени</dd>
-        </dl>
-        <p class="result__price">
-          <span>Затраты на питание:</span>
-          <span>15000 руб.</span>
-        </p>
-      </div>
-      <img class="example__before" src="img/cat-before.jpg" width="311" height="232" alt="Фотография кота до похудения">
-      <img class="example__after" src="img/cat-after.jpg" width="251" height="240" alt="Фотография кота после похудения">
-      <div class="example__changes changes">
-        <button type="button" class="changes__button">Было</button>
-        <div class="changes__toggle toggle-full">
-          <div class="toggle-full__outside"></div>
-          <div class="toggle-full__inside"></div>
-        </div>
-        <button type="button" class="changes__button">Стало</button>
-      </div>
-    </section>
+    </fieldset>
+
+    <fieldset class="main-form__contacts">
+      <legend class="main-form__title">Контактные данные (владельца кота)</legend>
+      <ul class="user-contacts">
+        <li class="user-contacts__item">
+          <label for="user-email">E-mail:<sup>*</sup></label>
+          <input type="email" id="user-email" name="client-email" placeholder="kuklachev@gmail.com">
+        </li>
+        <li>
+          <label for="user-tel">Телефон:<sup>*</sup></label>
+          <input type="tel" id="user-tel" name="client-phone" placeholder="8 (960) 900-60-90">
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="main-form__comment">
+      <legend class="main-form__title">Комментарий</legend>
+      <textarea class="main-form__text" id="user-comment" name="client-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+    </fieldset>
+    <fieldset class="main-form__extra">
+      <legend class="main-form__title">Дополнительно</legend>
+      <ul class="extra-list">
+        <li class="extra-list__item">
+          <input type="checkbox" id="no-sugar" name="extra-info" value="sweetener" checked>
+          <label for="no-sugar" aria-label="Дополнительно требуется сахарозаменитель">Cахарозаменитель</label>
+        </li>
+        <li class="extra-list__item">
+          <input type="checkbox" id="drink-water" name="extra-info" value="water">
+          <label for="drink-water" aria-label="Дополнительно требуется питьевая вода">Питьевая вода</label>
+        </li>
+        <li class="extra-list__item">
+          <input type="checkbox" id="drink-milk" name="extra-info" value="milk">
+          <label for="drink-milk" aria-label="Дополнительно требуется молоко">Молоко</label>
+        </li>
+        <li>
+          <input type="checkbox" id="medicine" name="extra-info" value="vitamin">
+          <label for="medicine" aria-label="Дополнительно требуются витамины">Витамины</label>
+        </li>
+      </ul>
+    </fieldset>
+      <button type="submit" class="main-form__button">Oтправить заявку</button>
+      <p class="main-form__note"><sup>*</sup> — Обязательные поля</p>
+    </form>
   </main>
 
   <footer class="page-footer">
@@ -118,11 +120,14 @@
           Санкт-Петербург</p>
       </div>
       <div class="footer-contacts__map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003226!2d30.320858716213408!3d59.938719169053975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1617718256975!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003226!2d30.320858716213408!3d59.938719169053975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1617718256975!5m2!1sru!2sru"
+          width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy">
         </iframe>
       </div>
     </section>
-    <a class="page-footer__link" href="#"><img class="page-footer__logo" src="img/logo-name.svg" alt="логотип магазина CatEnergy"></a>
+    <a class="page-footer__link" href="#"><img class="page-footer__logo" src="img/logo-name.svg"
+        alt="логотип магазина CatEnergy"></a>
     <div class="page-footer__social footer-social">
       <ul class="footer-social__list">
         <li class="footer-social__item">
@@ -155,7 +160,7 @@
       </ul>
     </div>
     <div class="page-footer__copyright copyright">
-      <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/22">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__name">HTML Academy</span>
         <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -164,6 +169,9 @@
         </svg>
       </a>
     </div>
+
   </footer>
+
 </body>
+
 </html>
