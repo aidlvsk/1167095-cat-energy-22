@@ -34,7 +34,8 @@
     <p class="page-main__subtitle">Заполните анкету, и мы подберем
       программу питания для вашего кота</p>
     <form class="page-main__form main-form" method="POST" action="https://echo.htmlacademy.ru">
-      <ul class="main-form__user user-list">
+      <fieldset class="main-form__user">
+      <ul class="user-list">
         <li class="user-list__item">
           <label for="user-name">Имя:<sup>*</sup></label>
           <input type="text" id="user-name" name="client-name" placeholder="Барсик">
@@ -48,7 +49,9 @@
           <input type="number" id="user-age" name="client-age" placeholder="7">
         </li>
       </ul>
-      <ul class="main-form__goal goal-list">
+    </fieldset>
+    <fieldset class="main-form__goal">
+      <ul class="goal-list">
         <li class="goal-list__item">
           <input type="radio" name="client-goal" id="user-goal-slim" value="slim" checked>
           <label for="user-goal-slim">Похудение</label>
@@ -62,9 +65,11 @@
           <label for="user-goal-dontknow">Не знаю (Нужен ваш совет)</label>
         </li>
       </ul>
+    </fieldset>
 
-      <h2 class="main-form__title">Контактные данные (владельца кота)</h2>
-      <ul class="main-form__contacts user-contacts">
+    <fieldset class="main-form__contacts">
+      <legend class="main-form__title">Контактные данные (владельца кота)</legend>
+      <ul class="user-contacts">
         <li class="user-contacts__item">
           <label for="user-email">E-mail:<sup>*</sup></label>
           <input type="email" id="user-email" name="client-email" placeholder="kuklachev@gmail.com">
@@ -74,10 +79,14 @@
           <input type="tel" id="user-tel" name="client-phone" placeholder="8 (960) 900-60-90">
         </li>
       </ul>
-      <label for="user-comment" class="visually-hidden main-form__title">Комментарий</label>
-      <textarea id="user-comment" name="client-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
-      <h2 class="main-form__title">Дополнительно</h2>
-      <ul class="main-form__extra extra-list">
+    </fieldset>
+    <fieldset class="main-form__comment">
+      <legend class="main-form__title">Комментарий</legend>
+      <textarea class="main-form__text" id="user-comment" name="client-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+    </fieldset>
+    <fieldset class="main-form__extra">
+      <legend class="main-form__title">Дополнительно</legend>
+      <ul class="extra-list">
         <li class="extra-list__item">
           <input type="checkbox" id="no-sugar" name="extra-info" value="sweetener" checked>
           <label for="no-sugar" aria-label="Дополнительно требуется сахарозаменитель">Cахарозаменитель</label>
@@ -92,11 +101,12 @@
         </li>
         <li>
           <input type="checkbox" id="medicine" name="extra-info" value="vitamin">
-          <label for="medicine" aria-label="Дополнительно требуются витамины"></label>
+          <label for="medicine" aria-label="Дополнительно требуются витамины">Витамины</label>
         </li>
       </ul>
+    </fieldset>
       <button type="submit" class="main-form__button">Oтправить заявку</button>
-      <p class="main-form__comment"><sup>*</sup> — Обязательные поля</p>
+      <p class="main-form__note"><sup>*</sup> — Обязательные поля</p>
     </form>
   </main>
 
@@ -150,7 +160,7 @@
       </ul>
     </div>
     <div class="page-footer__copyright copyright">
-      <a class="copyright__link" href="https://up.htmlacademy.ru/adaptive/22">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__name">HTML Academy</span>
         <svg width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
