@@ -1,10 +1,13 @@
+.about {
+  margin: 0 20px 0 20px;
+}
+
 .about__title {
   font-family: "Oswald", "Tahoma", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
   color: @text-black;
-  text-align: center;
 }
 
 .about__subtitle {
@@ -19,4 +22,25 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.about__item {
+  @media (min-width: @tablet-width) {
+    width: 250px;
+  }
 }

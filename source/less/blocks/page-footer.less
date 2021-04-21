@@ -13,3 +13,14 @@
 .page-footer__contacts--form {
   background-color: @light-grey;
 }
+
+.page-footer__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

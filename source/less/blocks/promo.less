@@ -1,13 +1,49 @@
 .promo {
-  background: linear-gradient(180deg, rgba(104, 183, 56, 1) 63%, rgba(255, 255, 255, 1) 63%);
-  height: 480px;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    min-height: 872px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 140px;
+  }
+}
+
+.promo::before {
+  z-index: -1;
+  display: block;
+  content: "";
+  background: @green-cat url("../../img/green-cat.png") no-repeat top center;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 62%;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: @green-cat url("../../img/green-cat-desktop.png") no-repeat center right;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+  }
 }
 
 .promo__description {
-  background-image: url("../../img/green-cat.png");
-  background-repeat: no-repeat;
-  background-position: top;
-  height: 302px;
+  @media (min-width: @desktop-width) {
+    width: 50%;
+  }
 }
 
 .promo__title {
@@ -17,6 +53,11 @@
   line-height: 36px;
   color: @text-white;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    color: @text-black;
+    text-align: start;
+  }
 }
 
 .promo__subtitle {
@@ -27,13 +68,11 @@
   text-transform: uppercase;
   color: @text-white;
   text-align: center;
-}
 
-.promo__button {
-  background-image: url("../../img/orange-bank.png");
-  background-repeat: no-repeat;
-  height: 313px;
-  margin-top: -135px;
+  @media (min-width: @tablet-width) {
+    color: @text-black;
+    text-align: start;
+  }
 }
 
 .promo__link {
@@ -46,4 +85,31 @@
   text-transform: uppercase;
   color: @text-white;
   background-color: @basic-green;
+  margin-top: 3px;
+
+  @media (min-width: @tablet-width) {
+    width: 244px;
+  }
+}
+
+.promo__image {
+  margin: 0 auto;
+  margin-top: 29px;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    transform: none;
+    width: 709px;
+    height: 609px;
+    top: 236px;
+    right: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
+    position: absolute;
+    top: 140px;
+    right: 330px;
+  }
 }
