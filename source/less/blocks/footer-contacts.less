@@ -1,3 +1,15 @@
+.footer-contacts__info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 19px 0 19px;
+  min-height: 114px;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 72px 0 72px;
+  }
+}
+
 .footer-contacts__invite {
   font-family: "Oswald", "Tahoma", sans-serif;
   font-weight: 400;
@@ -5,7 +17,10 @@
   line-height: 18px;
   color: @text-black;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
+  width: 140px;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-contacts__adress {
@@ -13,6 +28,9 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  text-align: center;
+  text-align: left;
   color: @text-grey;
+  width: 140px;
+  margin: 0;
+  padding: 0;
 }
