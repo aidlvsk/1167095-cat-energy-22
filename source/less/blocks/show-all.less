@@ -1,3 +1,9 @@
+.show-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .show-all__title {
   font-family: "Oswald", "Tahoma", sans-serif;
   font-weight: 400;
@@ -27,4 +33,8 @@
   text-decoration: none;
   color: @text-grey;
   background-color: @light-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+  }
 }
