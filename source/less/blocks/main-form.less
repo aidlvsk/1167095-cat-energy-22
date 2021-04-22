@@ -1,3 +1,46 @@
+.main-form {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.main-form__user {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+.main-form__goal {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+}
+
+.main-form__contacts {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+.main-form__comment {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+.main-form__extra {
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
 .main-form__title {
   font-family: "Oswald", "Tahoma", sans-serif;
   font-weight: 400;
@@ -13,6 +56,8 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @text-grey;
+  width: 100%;
+  min-height: 150px;
 }
 
 .main-form__button {
@@ -25,6 +70,12 @@
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    max-width: 282px;
+  }
 }
 
 .main-form__note {
@@ -34,4 +85,28 @@
   line-height: 16px;
   text-align: center;
   color: @text-black;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+}
+
+.main-form__user,
+.main-form__goal,
+.main-form__contacts,
+.main-form__comment,
+.main-form__extra {
+  border: none;
+}
+
+.main-form__link {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
 }
