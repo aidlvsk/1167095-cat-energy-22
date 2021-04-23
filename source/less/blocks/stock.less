@@ -3,7 +3,28 @@
   background-image: url("../../img/green-cat-in-house.png");
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 289px;
+  background-size: cover;
+  height: 289px;
+  padding: 64px 61px 43px 61px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    height: 200px;
+    background-image: url("../../img/green-cat-width.png");
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    height: 289px;
+    width: 245px;
+    background-image: url("../../img/green-cat-in-house.png");
+  }
 }
 
 .stock__text {
@@ -13,4 +34,6 @@
   line-height: 20px;
   text-align: center;
   color: @basic-white;
+  margin: 0;
+  padding: 0;
 }
