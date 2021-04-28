@@ -1,6 +1,13 @@
 .changes {
+  margin-top: 13px;
+  margin-bottom: 25px;
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 67px;
+  }
 }
 
 .changes__button {
@@ -11,4 +18,13 @@
   text-align: center;
   color: @text-black;
   text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: dotted 1px @special-grey;
+    padding: 4px 0 4px 0;
+  }
 }

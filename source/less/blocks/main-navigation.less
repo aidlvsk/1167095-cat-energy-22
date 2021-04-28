@@ -1,3 +1,32 @@
+.main-navigation__button {
+  display: none;
+
+  @media (max-width: @mobile-width-only) {
+    display: block;
+    border: none;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    background: @basic-white url("../../img/close-icon.svg") center center no-repeat;
+  }
+}
+
+.main-navigation--closed .main-navigation__button {
+  @media (max-width: @mobile-width-only) {
+    width: 24px;
+    height: 18px;
+    background: @basic-white url("../../img/navigation-icon.svg") center center no-repeat;
+  }
+}
+
+.main-navigation--nojs .main-navigation__button {
+  display: none;
+}
+
 .main-navigation__list {
   list-style-type: none;
   margin: 0;
@@ -8,9 +37,20 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
-    min-width: 440px;
     align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.main-navigation--closed .main-navigation__list {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-navigation--nojs .main-navigation__list {
+  @media (max-width: @mobile-width-only) {
+    display: flex;
   }
 }
 
@@ -19,7 +59,48 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+  text-align: center;
   color: @text-black;
+  padding-top: 22px;
+  padding-bottom: 24px;
+  border-bottom: solid 1px @grey-border;
+  width: 100%;
+
+  &:last-child {
+    @media (min-width: @tablet-width) {
+      margin-right: 0;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: max-content;
+    border: none;
+    margin-right: 35px;
+    padding-top: 18px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 10px;
+  }
+
+  &--current {
+    @media (min-width: @tablet-width) {
+      border-bottom: solid 2px @basic-green;
+    }
+
+    @media (min-width: @desktop-width) {
+      border-bottom: solid 2px @basic-white;
+    }
+  }
 }
 
 .main-navigation__link {
@@ -30,4 +111,15 @@
   text-decoration: none;
   color: @text-black;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @text-white;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

@@ -1,5 +1,19 @@
 .about {
-  margin: 0 20px 0 20px;
+  padding: 0 20px 42px 20px;
+  margin-top: 27px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px 0 30px;
+    margin-top: 45px;
+    border-bottom: solid 2px @grey-border;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 100px 0 110px;
+    margin-top: 71px;
+    border: none;
+  }
 }
 
 .about__title {
@@ -8,6 +22,9 @@
   font-size: 36px;
   line-height: 40px;
   color: @text-black;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 38px;
 }
 
 .about__subtitle {
@@ -16,6 +33,14 @@
   font-size: 14px;
   line-height: 18px;
   color: @text-grey;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 31px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .about__list {
@@ -32,15 +57,112 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    grid-row-gap: 37px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 80px;
   }
 }
 
 .about__item {
+  margin-bottom: 20px;
+  padding-left: 80px;
+  position: relative;
+  min-height: 60px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media (min-width: @tablet-width) {
-    width: 250px;
+    padding: 40px 0 57px 0;
+    margin: 0;
+  }
+
+  &--nutrition::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url("../../img/icon-nutrition-small.svg");
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: @basic-green;
+      position: initial;
+      display: block;
+    }
+  }
+
+  &--powder::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url("../../img/icon-powder-small.svg");
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: @basic-green;
+      position: initial;
+      display: block;
+    }
+  }
+
+  &--meal::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url("../../img/icon-meal-small.svg");
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: @basic-green;
+      position: initial;
+      display: block;
+    }
+  }
+
+  &--time::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-image: url("../../img/icon-time-small.png");
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: @basic-green;
+      position: initial;
+      display: block;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    max-width: 250px;
   }
 }
