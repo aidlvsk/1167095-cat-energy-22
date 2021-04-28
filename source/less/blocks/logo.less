@@ -1,7 +1,81 @@
 .logo {
-  width: 190px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  margin-right: -24px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 24px;
+  }
+}
+
+.logo__image {
+  width: 33px;
+  height: 37px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.logo__image--tablet {
+  display: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.logo__image--desktop {
+  display: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.logo__name {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
