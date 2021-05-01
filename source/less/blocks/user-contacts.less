@@ -6,6 +6,7 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
   }
 }
 
@@ -17,19 +18,78 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @text-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .user-contacts__item {
   display: flex;
   width: 100%;
+  align-items: baseline;
+  margin-bottom: 14px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--mail::after {
+    content: "";
+    display: block;
+    background-image: url("../../img/mail.svg");
+    background-repeat: no-repeat;
+    width: 19px;
+    height: 14px;
+    position: absolute;
+    top: 17px;
+    right: 16px;
+
+    @media (min-width: @tablet-width) {
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  &--tel::after {
+    content: "";
+    display: block;
+    background-image: url("../../img/phone.svg");
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 13px;
+    right: 13px;
+
+    @media (min-width: @tablet-width) {
+      top: 17px;
+      right: 16px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .user-contacts__item label {
   min-width: fit-content;
+  margin-right: 10px;
 }
 
 
 .user-contacts__input {
   width: 100%;
-  min-height: 45px;
+  border: solid 1px @grey-border-light;
+  box-sizing: border-box;
+  padding: 13px 15px 15px 15px;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 21px 10px 21px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

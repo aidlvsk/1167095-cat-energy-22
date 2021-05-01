@@ -286,11 +286,11 @@
             <input class="user-list__input" type="text" id="user-name" name="client-name" placeholder="Барсик">
           </li>
           <li class="user-list__item">
-            <label for="user-weight">Вес (кг):<sup>*</sup></label>
+            <label for="user-weight">Вес&nbsp;(кг):<sup>*</sup></label>
             <input class="user-list__input" type="number" id="user-weight" name="client-weight" placeholder="7">
           </li>
           <li class="user-list__item">
-            <label for="user-age">Возраст (лет):</label>
+            <label for="user-age">Возраст&nbsp;(лет):</label>
             <input class="user-list__input" type="number" id="user-age" name="client-age" placeholder="7">
           </li>
         </ul>
@@ -298,29 +298,29 @@
       <fieldset class="main-form__goal">
         <ul class="goal-list">
           <li class="goal-list__item">
-            <input type="radio" name="client-goal" id="user-goal-slim" value="slim" checked>
-            <label for="user-goal-slim">Похудение</label>
+            <input class="goal-list__input" type="radio" name="client-goal" id="user-goal-slim" value="slim" checked>
+            <label class="goal-list__label" for="user-goal-slim">Похудение</label>
           </li>
           <li class="goal-list__item">
-            <input type="radio" name="client-goal" id="user-goal-weight" value="weight-gain">
-            <label for="user-goal-weight">Набор массы</label>
+            <input class="goal-list__input" type="radio" name="client-goal" id="user-goal-weight" value="weight-gain">
+            <label class="goal-list__label" for="user-goal-weight">Набор массы</label>
           </li>
           <li class="goal-list__item">
-            <input type="radio" name="client-goal" id="user-goal-dontknow" value="dont-know">
-            <label for="user-goal-dontknow">Не знаю (Нужен ваш совет)</label>
+            <input class="goal-list__input" type="radio" name="client-goal" id="user-goal-dontknow" value="dont-know">
+            <label class="goal-list__label" for="user-goal-dontknow">Не знаю (Нужен ваш совет)</label>
           </li>
         </ul>
       </fieldset>
 
       <fieldset class="main-form__contacts">
-        <legend class="main-form__title main-form__contacts--label">Контактные данные (владельца кота)</legend>
+        <legend class="main-form__title main-form__title--contacts">Контактные данные (владельца кота)</legend>
         <ul class="user-contacts">
-          <li class="user-contacts__item">
+          <li class="user-contacts__item user-contacts__item--mail">
             <label for="user-email">E-mail:<sup>*</sup></label>
             <input class="user-contacts__input" type="email" id="user-email" name="client-email"
               placeholder="kuklachev@gmail.com">
           </li>
-          <li class="user-contacts__item">
+          <li class="user-contacts__item user-contacts__item--tel">
             <label for="user-tel">Телефон:<sup>*</sup></label>
             <input class="user-contacts__input" type="tel" id="user-tel" name="client-phone"
               placeholder="8 (960) 900-60-90">
@@ -328,41 +328,41 @@
         </ul>
       </fieldset>
       <fieldset class="main-form__comment">
-        <legend class="main-form__title">Комментарий</legend>
+        <legend class="main-form__title main-form__title--comment">Комментарий</legend>
         <textarea class="main-form__text" id="user-comment" name="client-comment"
           placeholder="Расскажите обо всех повадках кота"></textarea>
       </fieldset>
       <fieldset class="main-form__extra">
-        <legend class="main-form__title">Дополнительно</legend>
+        <legend class="main-form__title main-form__title--extra">Дополнительно</legend>
         <ul class="extra-list">
           <li class="extra-list__item">
-            <input type="checkbox" id="no-sugar" name="extra-info" value="sweetener" checked>
-            <label for="no-sugar" aria-label="Дополнительно требуется сахарозаменитель">Cахарозаменитель</label>
+            <input class="extra-list__input" type="checkbox" id="no-sugar" name="extra-info" value="sweetener" checked>
+            <label class="extra-list__label" for="no-sugar" aria-label="Дополнительно требуется сахарозаменитель">Cахарозаменитель</label>
           </li>
           <li class="extra-list__item">
-            <input type="checkbox" id="drink-water" name="extra-info" value="water">
-            <label for="drink-water" aria-label="Дополнительно требуется питьевая вода">Питьевая вода</label>
+            <input class="extra-list__input" type="checkbox" id="drink-water" name="extra-info" value="water">
+            <label class="extra-list__label" for="drink-water" aria-label="Дополнительно требуется питьевая вода">Питьевая вода</label>
           </li>
           <li class="extra-list__item">
-            <input type="checkbox" id="drink-milk" name="extra-info" value="milk">
-            <label for="drink-milk" aria-label="Дополнительно требуется молоко">Молоко</label>
+            <input class="extra-list__input" type="checkbox" id="drink-milk" name="extra-info" value="milk">
+            <label class="extra-list__label" for="drink-milk" aria-label="Дополнительно требуется молоко">Молоко</label>
           </li>
           <li class="extra-list__item">
-            <input type="checkbox" id="medicine" name="extra-info" value="vitamin">
-            <label for="medicine" aria-label="Дополнительно требуются витамины">Витамины</label>
+            <input class="extra-list__input" type="checkbox" id="medicine" name="extra-info" value="vitamin">
+            <label class="extra-list__label" for="medicine" aria-label="Дополнительно требуются витамины">Витамины</label>
           </li>
         </ul>
       </fieldset>
-      <div class="main-form__link">
+      <fieldset class="main-form__submit">
         <button type="submit" class="main-form__button">Oтправить заявку</button>
         <p class="main-form__note"><sup>*</sup> — Обязательные поля</p>
-      </div>
+      </fieldset>
     </form>
   </main>
 
   <footer class="page-footer">
     <section class="page-footer__contacts page-footer__contacts--index footer-contacts">
-      <div class="footer-contacts__info">
+      <div class="footer-contacts__info footer-contacts__info--form">
         <h2 class="footer-contacts__invite">Приглашаем
           к&nbsp;сотрудничеству дилеров!</h2>
         <p class="footer-contacts__adress">
