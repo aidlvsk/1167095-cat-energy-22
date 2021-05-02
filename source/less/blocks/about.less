@@ -82,6 +82,23 @@
     margin: 0;
   }
 
+  &--nutrition::after {
+    content: "1";
+    display: none;
+    font-family: "Oswald", "Tahoma", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    color: @light-grey;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 118px;
+      z-index: -1;
+    }
+  }
+
   &--nutrition::before {
     content: "";
     width: 60px;
@@ -99,6 +116,23 @@
       background-color: @basic-green;
       position: initial;
       display: block;
+    }
+  }
+
+  &--powder::after {
+    content: "2";
+    font-family: "Oswald", "Tahoma", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    color: @light-grey;
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 112px;
+      z-index: -1;
     }
   }
 
@@ -122,6 +156,23 @@
     }
   }
 
+  &--meal::after {
+    content: "3";
+    font-family: "Oswald", "Tahoma", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    color: @light-grey;
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 113px;
+      z-index: -1;
+    }
+  }
+
   &--meal::before {
     content: "";
     width: 60px;
@@ -139,6 +190,23 @@
       background-color: @basic-green;
       position: initial;
       display: block;
+    }
+  }
+
+  &--time::after {
+    content: "4";
+    font-family: "Oswald", "Tahoma", sans-serif;
+    font-size: 280px;
+    line-height: 280px;
+    color: @light-grey;
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 113px;
+      z-index: -1;
     }
   }
 

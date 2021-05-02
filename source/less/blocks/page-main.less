@@ -11,6 +11,20 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+  padding: 27px 20px 0 20px;
+  margin: 0;
+  margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 54px;
+    padding: 64px 70px 0 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 64px 110px 0 110px;
+  }
 }
 
 .page-main__subtitle {
@@ -19,19 +33,108 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  padding: 0 20px 0 20px;
+  margin: 0;
+  margin-bottom: 39px;
+  max-width: 226px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    min-width: 323px;
+    margin-bottom: 66px;
+    padding: 0 70px 0 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px 0 110px;
+  }
 }
 
 .page-main__section-title {
+  display: inline-block;
+  width: auto;
   font-family: "Oswald", "Tahoma", sans-serif;
   font-weight: 400;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 26px;
   color: @text-black;
-  text-align: left;
+  padding: 0 20px 0 20px;
+  margin-top: 25px;
+  margin-bottom: 36px;
+  background: @basic-white;
+  position: relative;
+
+  &::before {
+    z-index: -1;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 17px;
+    width: 100vw;
+    height: 2px;
+    background: @basic-green;
+
+    @media (min-width: @tablet-width) {
+      left: -30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: -70px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 40px 76px 40px;
+    margin: 0;
+    margin-left: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 70px;
+  }
 }
 
 .page-main__wrapper {
+  margin: 0 20px;
+
   @media (min-width: @desktop-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-column-gap: 80px;
+    margin: 0 110px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 86px;
+  }
+}
+
+.page-main__extra {
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.page-main__catalog {
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+    margin-top: 165px;
+    margin-bottom: 68px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 110px;
+    margin-top: 165px;
+    margin-bottom: 75px;
   }
 }
