@@ -59,13 +59,22 @@
   font-size: 16px;
   line-height: 20px;
   display: block;
-  padding: 5px;
+  padding: 10px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: @text-grey;
   width: 100%;
   background-color: @light-grey;
+
+  &:hover {
+    background-color: @basic-grey;
+  }
+
+  &:active {
+    background-color: @basic-grey;
+    color: rgba(0, 0, 0, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     margin-top: auto;
