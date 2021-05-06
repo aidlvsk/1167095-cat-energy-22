@@ -54,6 +54,14 @@
     top: 8px;
     left: 8px;
   }
+
+  &:hover::before {
+    border: solid 1px @hover-grey;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .goal-list__input:checked + label::after {

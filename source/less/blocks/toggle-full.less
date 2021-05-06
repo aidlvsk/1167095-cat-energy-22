@@ -29,6 +29,16 @@
   top: 4px;
   left: 5px;
   z-index: 2;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+
+  &:hover {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+  }
+
+  &:active {
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+    border: solid 1px @basic-green;
+  }
 
   &::after {
     @media (min-width: @tablet-width) {

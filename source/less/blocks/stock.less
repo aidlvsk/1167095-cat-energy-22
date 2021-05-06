@@ -1,6 +1,6 @@
 .stock {
   background-color: rgba(104, 183, 56, 1);
-  background-image: url("../../img/green-cat-in-house.png");
+  background-image: url("../../img/gift-background-1x.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -13,19 +13,31 @@
   justify-content: space-between;
   align-items: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/gift-background-2x.png");
+  }
+
   @media (min-width: @tablet-width) {
     flex-direction: row;
     height: 200px;
-    background-image: url("../../img/green-cat-width.png");
+    background-image: url("../../img/gift-background-wide-1x.png");
     padding: 57px 78px 60px 78px;
+  }
+
+  @media (min-resolution: 2dppx) and (min-width: @tablet-width) {
+    background-image: url("../../img/gift-background-wide-2x.png");
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
     height: 289px;
     width: 245px;
-    background-image: url("../../img/green-cat-in-house.png");
+    background-image: url("../../img/gift-background-1x.png");
     padding: 55px 43px 42px 41px;
+  }
+
+  @media (min-resolution: 2dppx) and (min-width: @desktop-width) {
+    background-image: url("../../img/gift-background-2x.png");
   }
 }
 
