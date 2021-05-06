@@ -19,13 +19,18 @@
   z-index: -1;
   display: block;
   content: "";
-  background: @green-cat url("../../img/green-cat.png") no-repeat top center;
+  background: @green-cat url("../../img/green-cat-1x.png") no-repeat top center;
   background-size: cover;
   position: absolute;
   right: 0;
   top: 0;
   width: 100%;
   height: 62%;
+
+  @media (min-resolution: 2dppx) {
+    background: @green-cat url("../../img/green-cat-2x.png") no-repeat top center;
+    background-size: cover;
+  }
 
   @media (min-width: @tablet-width) {
     background: none;
@@ -35,10 +40,15 @@
     position: absolute;
     right: 0;
     top: 0;
-    background: @green-cat url("../../img/green-cat-desktop.png") no-repeat center right;
+    background: @green-cat url("../../img/green-cat-desktop-1x.png") no-repeat center right;
     background-size: cover;
     width: 50%;
     height: 100%;
+  }
+
+  @media (min-resolution: 2dppx) and (min-width: @desktop-width) {
+    background: @green-cat url("../../img/green-cat-desktop-2x.png") no-repeat center right;
+    background-size: cover;
   }
 }
 
