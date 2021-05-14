@@ -30,12 +30,17 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0 30px 0 30px;
+    min-height: 143px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px 0 110px;
     min-height: 150px;
   }
 }
 
 .page-footer__link {
-  padding: 39px 0 32px 0;
+  padding: 37px 0 28px 0;
   width: 100%;
   text-align: center;
   border-bottom: solid 1px @light-grey-border;
@@ -56,7 +61,7 @@
 }
 
 .page-footer__social {
-  padding: 20px 0 21px 0;
+  padding: 20px 0 16px 0;
   width: 100%;
   border-bottom: solid 1px @light-grey-border;
   display: flex;
@@ -65,6 +70,7 @@
   @media (min-width: @tablet-width) {
     border: none;
     padding: 0;
+    margin-right: -30px;
   }
 }
 

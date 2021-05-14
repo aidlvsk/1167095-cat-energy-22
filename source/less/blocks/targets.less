@@ -41,6 +41,7 @@
 
   @media (min-width: @tablet-width) {
     padding: 77px 0 53px 53px;
+    margin-bottom: 29px;
   }
 
   @media (min-width: @desktop-width) {
@@ -79,6 +80,7 @@
     height: 50px;
     position: absolute;
     left: 13px;
+    top: 25px;
 
     @media (min-width: @tablet-width) {
       display: none;
@@ -105,11 +107,12 @@
   color: @text-black;
   margin: 0;
   margin-bottom: 29px;
-  padding-left: 69px;
+  padding-left: 71px;
+  padding-top: 9px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
     max-width: 377px;
     font-size: 36px;
     line-height: 36px;
@@ -131,20 +134,28 @@
   padding: 0;
   padding-bottom: 23px;
   border-bottom: solid 1px @light-grey-border;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+
+  &--weight {
+    @media (min-width: @tablet-width) {
+      width: 344px;
+      margin-bottom: 50px;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
     padding: 0;
     padding-right: 270px;
-    margin-bottom: 48px;
+    margin-bottom: 52px;
     border: none;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 23px;
+    margin-bottom: 28px;
     padding: 0;
+    min-width: fit-content;
   }
 }
 
@@ -159,6 +170,7 @@
   position: relative;
   width: fit-content;
   margin-top: auto;
+  margin-bottom: 4px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -177,11 +189,15 @@
     background-image: url("../../img/icon_arrow.svg");
     background-repeat: no-repeat;
     top: 2px;
-    right: -47px;
+    right: -56px;
 
     @media (min-width: @tablet-width) {
       top: 8px;
       right: -47px;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: -60px;
     }
   }
 }
@@ -203,6 +219,7 @@
     position: absolute;
     top: 81px;
     right: 62px;
+    height: 208px;
   }
 
   @media (min-width: @desktop-width) {
@@ -213,6 +230,7 @@
     @media (min-width: @tablet-width) {
       top: 91px;
       right: 28px;
+      height: 200px;
     }
   }
 }
