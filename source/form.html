@@ -9,7 +9,7 @@
 </head>
 
 <body class="page-body">
-  <header class="page-header page-header--main-page">
+  <header class="page-header">
     <div class="page-header__top">
       <a class="page-header__logo logo" href="index.html">
         <svg class="logo__image" width="34" height="38">
@@ -18,7 +18,7 @@
         <svg class="logo__name" width="101" height="18">
           <use xlink:href="./img/sprite.svg#logo-name"></use>
         </svg>
-        <svg class="logo__image--tablet" width="174" height="52">
+        <svg class="logo__image--tablet" width="200" height="60">
           <use xlink:href="./img/sprite.svg#logo-cat-in-cape"></use>
         </svg>
         <svg class="logo__image--desktop" width="202" height="59">
@@ -27,7 +27,7 @@
       </a>
     </div>
     <nav
-      class="page-header__navigation main-navigation main-navigation--main-page main-navigation--closed main-navigation--nojs">
+      class="page-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
       <button type="button" class="main-navigation__button" aria-label="Главное меню"></button>
       <ul class="main-navigation__list">
         <li class="main-navigation__item main-navigation__item--current">
@@ -36,8 +36,8 @@
         <li class="main-navigation__item">
           <a class="main-navigation__link" href="./catalog.html">Каталог продукции</a>
         </li>
-        <li class="main-navigation__item">
-          <a class="main-navigation__link" href="№">Подбор программы</a>
+        <li class="main-navigation__item main-navigation__item--current">
+          <a class="main-navigation__link" href="#">Подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -65,7 +65,7 @@
             <label for="user-name">Имя:<sup>*</sup></label>
             <input class="user-list__input" required type="text" id="user-name" name="client-name" placeholder="Барсик">
           </li>
-          <li class="user-list__item">
+          <li class="user-list__item user-list__item--weight">
             <label for="user-weight">Вес&nbsp;(кг):<sup>*</sup></label>
             <input class="user-list__input" required type="number" id="user-weight" name="client-weight"
               placeholder="7">
@@ -104,7 +104,7 @@
               <use xlink:href="./img/sprite.svg#mail"></use>
             </svg>
           </li>
-          <li class="user-contacts__item">
+          <li class="user-contacts__item user-contacts__item-tel">
             <label for="user-tel">Телефон:<sup>*</sup></label>
             <input class="user-contacts__input" required type="tel" id="user-tel" name="client-phone"
               placeholder="8 (960) 900-60-90">
@@ -169,7 +169,7 @@
     </section>
     <section class="page-footer__bottom">
       <a class="page-footer__link" href="index.html"><img class="page-footer__logo" src="img/logo-name.svg"
-          alt="логотип магазина CatEnergy" width="101" height="18"></a>
+          alt="логотип магазина CatEnergy" width="128" height="24"></a>
       <div class="page-footer__social footer-social">
         <ul class="footer-social__list">
           <li class="footer-social__item">

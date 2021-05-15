@@ -9,7 +9,7 @@
 </head>
 
 <body class="page-body">
-  <header class="page-header page-header--main-page">
+  <header class="page-header">
     <div class="page-header__top">
       <a class="page-header__logo logo" href="index.html">
         <svg class="logo__image" width="34" height="38">
@@ -18,7 +18,7 @@
         <svg class="logo__name" width="101" height="18">
           <use xlink:href="./img/sprite.svg#logo-name"></use>
         </svg>
-        <svg class="logo__image--tablet" width="174" height="52">
+        <svg class="logo__image--tablet" width="200" height="60">
           <use xlink:href="./img/sprite.svg#logo-cat-in-cape"></use>
         </svg>
         <svg class="logo__image--desktop" width="202" height="59">
@@ -27,13 +27,13 @@
       </a>
     </div>
     <nav
-      class="page-header__navigation main-navigation main-navigation--main-page main-navigation--closed main-navigation--nojs">
+      class="page-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
       <button type="button" class="main-navigation__button" aria-label="Главное меню"></button>
       <ul class="main-navigation__list">
-        <li class="main-navigation__item main-navigation__item--current">
+        <li class="main-navigation__item main-navigation__item--index-catalog">
           <a class="main-navigation__link" href="index.html">Главная</a>
         </li>
-        <li class="main-navigation__item">
+        <li class="main-navigation__item main-navigation__item--current main-navigation__item--catalog">
           <a class="main-navigation__link" href="#">Каталог продукции</a>
         </li>
         <li class="main-navigation__item">
@@ -55,12 +55,12 @@
   </header>
 
   <main class="page-main">
-    <h1 class="page-main__title">Каталог продукции</h1>
+    <h1 class="page-main__title page-main__title--catalog">Каталог продукции</h1>
     <section class="page-main__catalog">
       <h2 class="page-main__catalog-title visually-hidden">Каталог</h2>
       <ul class="catalog">
         <li class="catalog__item product">
-          <a href="#" class="product__link">
+          <a href="#" class="product__link product__link--chicken-500-tab">
             <picture>
               <source media="(max-width: 767px)" type="image/webp"
                 srcset="./img/chicken-bucket-500-mobile-1x.webp 1x, ./img/chicken-bucket-500-mobile-2x.webp 2x">
@@ -79,7 +79,7 @@
             <dl class="product__properties">
               <div class="product__property">
                 <dt>Масса</dt>
-                <dd>500г</dd>
+                <dd>500 г<span class="transparent-dote">.</span></dd>
               </div>
               <div class="product__property">
                 <dt>Вкус</dt>
@@ -95,7 +95,7 @@
             aria-label="Заказать питание для котов со вкусом курицы Cat Energy PRO 500 г">Заказать</a>
         </li>
         <li class="catalog__item product">
-          <a href="#" class="product__link">
+          <a href="#" class="product__link product__link--chicken-1000-tab">
             <picture>
               <source media="(max-width: 767px)" type="image/webp"
                 srcset="./img/chicken-bucket-1000-mobile-1x.webp 1x, ./img/chicken-bucket-1000-mobile-2x.webp 2x">
@@ -105,7 +105,7 @@
                 srcset="./img/chicken-bucket-1000-mobile-1x.png 1x, ./img/chicken-bucket-1000-mobile-2x.png 2x">
               <source media="(min-width: 768px)"
                 srcset="./img/chicken-bucket-1000-1x.png 1x, ./img/chicken-bucket-1000-2x.png 2x">
-              <img class="product__image"
+              <img class="product__image product__image--chicken-1000-mob"
                 alt="Банка питания для котов со вкусом курицы Cat Energy PRO 1000 г, оранжевая"
                 src="./img/chicken-bucket-1000-mobile-1x.png" width="172" height="202">
             </picture>
@@ -115,7 +115,7 @@
             <dl class="product__properties">
               <div class="product__property">
                 <dt>Масса</dt>
-                <dd>1000г</dd>
+                <dd>1000 г<span class="transparent-dote">.</span></dd>
               </div>
               <div class="product__property">
                 <dt>Вкус</dt>
@@ -131,19 +131,18 @@
             aria-label="Заказать питание для котов со вкусом курицы Cat Energy PRO 1000 г">Заказать</a>
         </li>
         <li class="catalog__item product">
-          <a href="#" class="product__link">
+          <a href="#" class="product__link product__link--fish-500-tab">
             <picture>
               <source media="(max-width: 767px)" type="image/webp"
                 srcset="./img/fish-bucket-500-mobile-1x.webp 1x, ./img/fish-bucket-500-mobile-2x.webp 2x">
               <source media="(min-width: 768px)" type="image/webp"
                 srcset="./img/fish-bucket-500-1x.webp 1x, ./img/fish-bucket-500-2x.webp 2x">
-              \
               <source media="(max-width: 767px)"
                 srcset="./img/fish-bucket-500-mobile-1x.png 1x, ./img/fish-bucket-500-mobile-2x.png 2x">
               <source media="(min-width: 768px)"
                 srcset="./img/fish-bucket-500-1x.png 1x, ./img/fish-bucket-500-2x.png 2x">
-              <img class="product__image" alt="Банка питания для котов со вкусом рыбы Cat Energy PRO 500 г, зеленая"
-                src="./img/fish-bucket-500-mobile-1x.png" width="172" height="200">
+              <img class="product__image product__image--fish-500-mob" alt="Банка питания для котов со вкусом рыбы Cat Energy PRO 500 г, зеленая"
+                src="./img/fish-bucket-500-mobile-1x.png" width="172" height="190">
             </picture>
           </a>
           <div class="product__info">
@@ -151,7 +150,7 @@
             <dl class="product__properties">
               <div class="product__property">
                 <dt>Масса</dt>
-                <dd>500г</dd>
+                <dd>500 г<span class="transparent-dote">.</span></dd>
               </div>
               <div class="product__property">
                 <dt>Вкус</dt>
@@ -167,7 +166,7 @@
             aria-label="Заказать питание для котов со вкусом рыбы Cat Energy PRO 500 г">Заказать</a>
         </li>
         <li class="catalog__item product">
-          <a href="#" class="product__link">
+          <a href="#" class="product__link product__link--fish-1000-tab">
             <picture>
               <source media="(max-width: 767px)" type="image/webp"
                 srcset="./img/fish-bucket-1000-mobile-1x.webp 1x, ./img/fish-bucket-1000-mobile-2x.webp 2x">
@@ -177,7 +176,7 @@
                 srcset="./img/fish-bucket-1000-mobile-1x.png 1x, ./img/fish-bucket-1000-mobile-2x.png 2x">
               <source media="(min-width: 768px)"
                 srcset="./img/fish-bucket-1000-1x.png 1x, ./img/fish-bucket-1000-2x.png 2x">
-              <img class="product__image" alt="Банка питания для котов со вкусом рыбы Cat Energy PRO 1000 г, зеленая"
+              <img class="product__image product__image--fish-1000-mob" alt="Банка питания для котов со вкусом рыбы Cat Energy PRO 1000 г, зеленая"
                 src="./img/fish-bucket-1000-mobile-1x.png" width="172" height="196">
             </picture>
           </a>
@@ -186,7 +185,7 @@
             <dl class="product__properties">
               <div class="product__property">
                 <dt>Масса</dt>
-                <dd>1000г</dd>
+                <dd>1000 г<span class="transparent-dote">.</span></dd>
               </div>
               <div class="product__property">
                 <dt>Вкус</dt>
@@ -202,7 +201,7 @@
             aria-label="Заказать питание для котов со вкусом рыбы Cat Energy PRO 1000 г">Заказать</a>
         </li>
         <li class="catalog__item product">
-          <a href="#" class="product__link">
+          <a href="#" class="product__link product__link--buckwheat-500-tab">
             <picture>
               <source media="(max-width: 767px)" type="image/webp"
                 srcset="./img/buckwheat-bucket-500-mobile-1x.webp 1x, ./img/buckwheat-bucket-500-mobile-2x.webp 2x">
@@ -212,7 +211,7 @@
                 srcset="./img/buckwheat-bucket-500-mobile-1x.png 1x, ./img/buckwheat-bucket-500-mobile-2x.png 2x">
               <source media="(min-width: 768px)"
                 srcset="./img/buckwheat-bucket-500-1x.png 1x, ./img/buckwheat-bucket-500-2x.png 2x">
-              <img class="product__image" alt="Банка питания для котов с гречкой Cat Energy PRO 500 г, голубая"
+              <img class="product__image product__image--buckwheat-500-mob" alt="Банка питания для котов с гречкой Cat Energy PRO 500 г, голубая"
                 src="./img/buckwheat-bucket-500-mobile-1x.png" width="172" height="200">
             </picture>
           </a>
@@ -221,7 +220,7 @@
             <dl class="product__properties">
               <div class="product__property">
                 <dt>Масса</dt>
-                <dd>500г</dd>
+                <dd>500 г<span class="transparent-dote">.</span></dd>
               </div>
               <div class="product__property">
                 <dt>Вкус</dt>
@@ -237,7 +236,7 @@
             aria-label="Заказать питание для котов с гречкой Cat Energy slim 500 г">Заказать</a>
         </li>
         <li class="catalog__item product">
-          <a href="#" class="product__link">
+          <a href="#" class="product__link product__link--buckwheat-1000-tab">
             <picture>
               <source media="(max-width: 767px)" type="image/webp"
                 srcset="./img/buckwheat-bucket-1000-mobile-1x.webp 1x, ./img/buckwheat-bucket-1000-mobile-2x.webp 2x">
@@ -247,7 +246,7 @@
                 srcset="./img/buckwheat-bucket-1000-mobile-1x.png 1x, ./img/buckwheat-bucket-1000-mobile-2x.png 2x">
               <source media="(min-width: 768px)"
                 srcset="./img/buckwheat-bucket-1000-1x.png 1x, ./img/buckwheat-bucket-1000-2x.png 2x">
-              <img class="product__image" alt="Банка питания для котов с гречкой Cat Energy PRO 1000 г, голубая"
+              <img class="product__image product__image--buckwheat-1000-mob" alt="Банка питания для котов с гречкой Cat Energy PRO 1000 г, голубая"
                 src="./img/buckwheat-bucket-1000-mobile-1x.png" width="172" height="196">
             </picture>
           </a>
@@ -257,7 +256,7 @@
             <dl class="product__properties">
               <div class="product__property">
                 <dt>Масса</dt>
-                <dd>1000г</dd>
+                <dd>1000 г<span class="transparent-dote">.</span></dd>
               </div>
               <div class="product__property">
                 <dt>Вкус</dt>
@@ -273,7 +272,7 @@
             aria-label="Заказать питание для котов с гречкой Cat Energy slim 1000 г">Заказать</a>
         </li>
         <li class="catalog__item product">
-          <a href="#" class="product__link">
+          <a href="#" class="product__link product__link--rise-tab">
             <picture>
               <source media="(max-width: 767px)" type="image/webp"
                 srcset="./img/rise-bucket-500-mobile-1x.webp 1x, ./img/rise-bucket-500-mobile-2x.webp 2x">
@@ -283,7 +282,7 @@
                 srcset="./img/rise-bucket-500-mobile-1x.png 1x, ./img/rise-bucket-500-mobile-2x.png 2x">
               <source media="(min-width: 768px)"
                 srcset="./img/rise-bucket-500-1x.png 1x, ./img/rise-bucket-500-2x.png 2x">
-              <img class="product__image" alt="Банка питания для котов с рисом Cat Energy PRO 500 г, фиолетовая"
+              <img class="product__image product__image--rise-500-mob" alt="Банка питания для котов с рисом Cat Energy PRO 500 г, фиолетовая"
                 src="./img/rise-bucket-500-mobile-1x.png" width="172" height="200">
             </picture>
           </a>
@@ -292,7 +291,7 @@
             <dl class="product__properties">
               <div class="product__property">
                 <dt>Масса</dt>
-                <dd>500г</dd>
+                <dd>500 г<span class="transparent-dote">..</span></dd>
               </div>
               <div class="product__property">
                 <dt>Вкус</dt>
@@ -317,7 +316,7 @@
     </section>
 
     <h2 class="page-main__section-title">Дополнительные товары</h2>
-    <div class="page-main__wrapper">
+    <div class="page-main__wrapper-catalog">
       <section class="page-main__extra extra-products">
         <ul class="extra-products__list">
           <li class="extra-products__item product-card">
@@ -335,7 +334,7 @@
               <h3 class="product-card__title">Питьевая вода</h3>
               <dl class="product-card__property">
                 <dt class="product-card__count">5 литров</dt>
-                <dd class="product-card__price">50 Р.</dd>
+                <dd class="product-card__price product-card__price--small">50 Р.</dd>
               </dl>
             </div>
             <a class="product-card__button" href="./form.html">Заказать</a>
@@ -365,7 +364,7 @@
 
       <section class="page-main__stock stock">
         <img class="stock__image" src="./img/icon_gift.svg" width="78" height="80" alt="#">
-        <p class="stock__text">Закажите все и получите чехол для кота в подарок!</p>
+        <p class="stock__text">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
       </section>
     </div>
   </main>
@@ -389,7 +388,7 @@
     </section>
     <section class="page-footer__bottom">
       <a class="page-footer__link" href="index.html"><img class="page-footer__logo" src="img/logo-name.svg"
-          alt="логотип магазина CatEnergy" width="101" height="18"></a>
+          alt="логотип магазина CatEnergy" width="128" height="24"></a>
       <div class="page-footer__social footer-social">
         <ul class="footer-social__list">
           <li class="footer-social__item">

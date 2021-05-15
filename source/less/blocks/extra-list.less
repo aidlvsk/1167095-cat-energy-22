@@ -6,7 +6,8 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 60px;
+    grid-column-gap: 56px;
+    grid-row-gap: 31px;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,7 +23,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @text-black;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 
   &:last-child {
     margin-bottom: 0;
@@ -44,6 +45,11 @@
   align-items: center;
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &:hover::before {
     border: solid 1px @hover-grey;
   }
@@ -55,10 +61,16 @@
   &::before {
     content: "";
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 29px;
+    height: 29px;
     border: solid 1px @special-grey;
     margin-right: 16px;
+
+    @media (min-width: @tablet-width) {
+      width: 39px;
+      height: 39px;
+      margin-right: 18px;
+    }
   }
 
   &::after {
@@ -71,6 +83,11 @@
     position: absolute;
     top: 9px;
     left: 7px;
+
+    @media (min-width: @tablet-width) {
+      top: 13px;
+      left: 11px;
+    }
   }
 }
 
