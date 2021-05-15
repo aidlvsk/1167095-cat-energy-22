@@ -11,6 +11,7 @@ const del = require("del");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const svgstore = require("gulp-svgstore");
+const csso = require("postcss-csso");
 
 const clean = () => {
   return del("build");
@@ -26,13 +27,18 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer(),
+      autoprefixer()
     ]))
-    .pipe(sourcemap.write("."))
+    .pipe(rename("style.css"))
+    .pipe(gulp.dest("build/css"))
+    .pipe(postcss([
+      csso()
+    ]))
     .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
-};
+}
 
 exports.styles = styles;
 
