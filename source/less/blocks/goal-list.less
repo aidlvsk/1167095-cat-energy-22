@@ -21,6 +21,10 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 14px;
+  }
 }
 
 .goal-list__input {
@@ -40,19 +44,32 @@
     box-sizing: border-box;
     border-radius: 50%;
     border: solid 1px @special-grey;
-    margin-right: 16px;
+    margin-right: 15px;
+
+    @media (min-width: @tablet-width) {
+      width: 39px;
+      height: 39px;
+      margin-right: 21px;
+    }
   }
 
   &::after {
     content: "";
     display: none;
-    width: 14px;
-    height: 14px;
+    width: 13px;
+    height: 13px;
     background-color: @basic-green;
     border-radius: 50%;
     position: absolute;
     top: 8px;
     left: 8px;
+
+    @media (min-width: @tablet-width) {
+      width: 16px;
+      height: 16px;
+      top: 10px;
+      left: 12px;
+    }
   }
 
   &:hover::before {
