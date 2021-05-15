@@ -18,10 +18,10 @@
         <svg class="logo__name" width="101" height="18">
           <use xlink:href="./img/sprite.svg#logo-name"></use>
         </svg>
-        <svg class="logo__image--tablet" width="200" height="60">
+        <svg class="logo__image-tablet" width="200" height="60">
           <use xlink:href="./img/sprite.svg#logo-cat-in-cape"></use>
         </svg>
-        <svg class="logo__image--desktop" width="202" height="59">
+        <svg class="logo__image-desktop" width="202" height="59">
           <use xlink:href="./img/sprite.svg#logo-cat-with-crisps"></use>
         </svg>
       </a>
@@ -41,17 +41,6 @@
         </li>
       </ul>
     </nav>
-    <script>
-      const menu = document.querySelector(".main-navigation");
-      const button = menu.querySelector(".main-navigation__button");
-
-      button.addEventListener("click", function () {
-        menu.classList.toggle("main-navigation--opened");
-        menu.classList.toggle("main-navigation--closed");
-      });
-
-      menu.classList.remove("main-navigation--nojs");
-    </script>
   </header>
 
   <main class="page-main">
@@ -251,7 +240,7 @@
             </picture>
           </a>
           <div class="product__info">
-            <a href="#" class="product__title">Cat Energy slim 1000 г</h3>
+            <a href="#" class="product__title">Cat Energy slim 1000 г
             </a>
             <dl class="product__properties">
               <div class="product__property">
@@ -377,12 +366,12 @@
         <p class="footer-contacts__adress">
           <span>ул. Большая
             Конюшенная, д. 19/8</span>
-          <span class="footer-contacts__adress--item">Санкт-Петербург</span></p>
+          <span class="footer-contacts__adress-item">Санкт-Петербург</span></p>
       </div>
       <div class="footer-contacts__map">
         <iframe class="footer-contacts__frame"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003226!2d30.320858716213408!3d59.938719169053975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1617718256975!5m2!1sru!2sru"
-          width="100%" height="362" style="border: 0;" allowfullscreen="" loading="lazy">
+          height="362" style="border: 0;" allowfullscreen="" loading="lazy">
         </iframe>
       </div>
     </section>
@@ -417,13 +406,24 @@
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="copyright__name">HTML Academy</span>
-          <svg class="copyrigth__image" width="27" height="34">
+          <svg class="copyright__image" width="27" height="34">
             <use xlink:href="./img/sprite.svg#icon-html"></use>
           </svg>
         </a>
       </div>
     </section>
   </footer>
+  <script>
+    const menu = document.querySelector(".main-navigation");
+    const button = menu.querySelector(".main-navigation__button");
+
+    button.addEventListener("click", function () {
+      menu.classList.toggle("main-navigation--opened");
+      menu.classList.toggle("main-navigation--closed");
+    });
+
+    menu.classList.remove("main-navigation--nojs");
+  </script>
 </body>
 
 </html>

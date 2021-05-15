@@ -124,6 +124,22 @@
   }
 }
 
+.user-contacts__input--mail:focus + .user-contacts__image-mail {
+  fill: @basic-green;
+}
+
+.user-contacts__input--mail:invalid + .user-contacts__image-mail {
+  fill: @red;
+}
+
+.user-contacts__input--tel:focus + .user-contacts__image-tel {
+  fill: @basic-green;
+}
+
+.user-contacts__input--tel:invalid + .user-contacts__image-tel {
+  fill: @red;
+}
+
 .user-contacts__image-mail {
   position: absolute;
   top: 13px;
