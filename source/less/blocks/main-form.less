@@ -80,6 +80,11 @@
   }
 }
 
+.main-form__title--comment {
+  margin: 0 0 2px -40px;
+  padding: 0 40px 76px;
+}
+
 .main-form__user {
   padding: 0;
   margin: 0 20px 0 20px;
@@ -121,7 +126,6 @@
   padding: 0;
   margin: 0 20px;
   margin-bottom: 23px;
-  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     margin: 0 67px 63px 70px;
@@ -185,6 +189,10 @@
     line-height: 30px;
     padding: 9px 12px 10px 18px;
     min-height: 174px;
+  }
+
+  &:focus {
+    outline: 2px solid @text-grey;
   }
 }
 

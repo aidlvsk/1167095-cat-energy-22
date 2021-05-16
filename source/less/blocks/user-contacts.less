@@ -71,7 +71,8 @@
   // }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 18px;
+    margin-bottom: 21px;
+    box-sizing: border-box;
   }
 }
 
@@ -106,15 +107,15 @@
   outline: none;
 
   &:hover {
-    border: solid 1px @special-grey;
+    outline: solid 1px @special-grey;
   }
 
   &:focus {
-    border: 2px solid @text-grey;
+    outline: 2px solid @text-grey;
   }
 
   &:invalid {
-    border: 2px solid @red;
+    outline: 2px solid @red;
   }
 
   @media (min-width: @tablet-width) {
